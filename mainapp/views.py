@@ -25,37 +25,5 @@ def products(request, pk=None):
     return render(request, 'mainapp/products.html', context)
 
 
-# def products_home(request):
-#     context = {
-#         'links_menu': links_menu,
-#         'title': 'Товары'
-#     }
-#     return render(request, 'mainapp/products.html', context)
-#
-#
-# def products_modern(request):
-#     context = {
-#         'links_menu': links_menu,
-#         'title': 'Товары'
-#     }
-#     return render(request, 'mainapp/products.html', context)
-#
-#
-# def products_office(request):
-#     context = {
-#         'links_menu': links_menu,
-#         'title': 'Товары'
-#     }
-#     return render(request, 'mainapp/products.html', context)
-#
-#
-# def products_classic(request):
-#     context = {
-#         'links_menu': links_menu,
-#         'title': 'Товары'
-#     }
-#     return render(request, 'mainapp/products.html', context)
-
-
 def contact(request):
     return render(request, 'mainapp/contact.html')

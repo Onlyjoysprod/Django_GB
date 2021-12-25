@@ -8,7 +8,6 @@ from django.views.generic import ListView, CreateView, UpdateView, DeleteView, D
 from authapp.models import ShopUser
 from authapp.forms import ShopUserRegisterForm
 from mainapp.models import ProductCategory, Product
-from mainapp.views import get_basket
 from adminapp.forms import ShopUserAdminEditForm, ProductCategoryForm, ProductForm
 
 

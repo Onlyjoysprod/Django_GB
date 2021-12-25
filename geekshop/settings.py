@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -37,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'social_django',
 
     'adminapp',
     'authapp',
@@ -67,7 +73,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'mainapp.context_processors.basket',
             ],
         },
     },
@@ -140,15 +145,13 @@ AUTH_USER_MODEL = 'authapp.ShopUser'
 
 LOGIN_URL = '/auth/login/'
 
-BASE_URL = 'http://localhost:8000'
 
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 25
-EMAIL_HOST_USER = 'django@gb.local'
-EMAIL_HOST_PASSWORD = 'password'
-EMAIL_USE_SSL = False
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.vk.VKOAuth2'
+)
 
-# EMAIL_HOST_USER, EMAIL_HOST_PASSWORD = None, None
+SOCIAL_AUTH_VK_OAUTH2_KEY = str(os.getenv('SOCIAL_AUTH_VK_OAUTH2_KEY'))
+SOCIAL_AUTH_VK_OAUTH2_SECRET = str(os.getenv('SOCIAL_AUTH_VK_OAUTH2_SECRET'))
 
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = 'tmp/'
+API_VERSION = 5.131

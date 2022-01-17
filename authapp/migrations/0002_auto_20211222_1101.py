@@ -20,9 +20,5 @@ class Migration(migrations.Migration):
             name='activation_key_expired',
             field=models.DateTimeField(blank=True, null=True),
         ),
-        migrations.AddField(
-            model_name='shopuser',
-            name='id',
-            field=models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID'),
-        ),
+
     ]

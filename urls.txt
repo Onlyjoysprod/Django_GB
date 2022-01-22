@@ -1,1 +1,1 @@
-http://194.58.98.218/orders/update/1/
+http://194.58.98.218/products/1/

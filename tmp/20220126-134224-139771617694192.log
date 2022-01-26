@@ -1,0 +1,12 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Account verify
+From: django@gb.local
+To: django55@gb.local
+Date: Wed, 26 Jan 2022 10:42:24 -0000
+Message-ID: 
+ <164319374482.92342.10415955740761219158@194-58-98-218.cloudvps.regruhosting.ru>
+
+http://localhost:8000/auth/verify/django55@gb.local/f6d92f2857f33e8b8da82edf9ddb4f4f045b8889/
+-------------------------------------------------------------------------------

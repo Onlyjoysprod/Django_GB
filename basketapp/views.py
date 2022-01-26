@@ -29,8 +29,8 @@ def basket_add(request, pk):    # pk - Product.pk
             product=product_item
         )
 
-    #basket_item.quantity += 1
-    basket_item.quantity = F('quantity') + 1
+    basket_item.quantity += 1
+    # basket_item.quantity = F('quantity') + 1
     basket_item.save()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 

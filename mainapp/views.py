@@ -43,7 +43,7 @@ def index(request):
     return render(request, 'mainapp/index.html', context)
 
 
-@never_cache
+# @never_cache
 def products(request, pk=None, page=1):
     links_menu = get_links_menu()
 

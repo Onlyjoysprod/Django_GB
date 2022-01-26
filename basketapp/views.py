@@ -6,6 +6,7 @@ from django.template.loader import render_to_string
 
 from basketapp.models import Basket
 from mainapp.models import Product
+from django.db.models import F
 
 
 @login_required
@@ -29,6 +30,7 @@ def basket_add(request, pk):    # pk - Product.pk
         )
 
     basket_item.quantity += 1
+    # basket_item.quantity = F('quantity') + 1
     basket_item.save()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
